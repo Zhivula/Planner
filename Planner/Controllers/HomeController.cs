@@ -12,13 +12,14 @@ namespace Planner.Controllers
         public ActionResult Index()
         {
             ViewBag.List = new List<Day> {
-                new Day { Name = "Monday", Tasks = new List<Task>{ new Task(){ Subject = "Английский", Finish = DateTime.Now, Start = DateTime.Now } } },
-                new Day { Name = "Tuesday", Tasks = new List<Task>{ new Task(){ Subject = "Испанский", Finish = DateTime.Now, Start = DateTime.Now } } },
-                new Day { Name = "Wednesday", Tasks = new List<Task>{ new Task(){ Subject = "Русский", Finish = DateTime.Now, Start = DateTime.Now } } },
-                new Day { Name = "Thursday", Tasks = new List<Task>{ new Task(){ Subject = "Китайский", Finish = DateTime.Now, Start = DateTime.Now } } },
-                new Day { Name = "Friday", Tasks = new List<Task>{ new Task(){ Subject = "Французский", Finish = DateTime.Now, Start = DateTime.Now } } },
-                new Day { Name = "Saturday", Tasks = new List<Task>{ new Task(){ Subject = "Польский", Finish = DateTime.Now, Start = DateTime.Now } } },
-                new Day { Name = "Sunday", Tasks = new List<Task>{ new Task(){ Subject = "Японский", Finish = DateTime.Now, Start = DateTime.Now } } },
+                new Day { Name = "Monday", Tasks = new List<Task>{ new Task(){ Subject = "Английский", Finish = DateTime.Now.ToShortTimeString(), Start = DateTime.Now.ToShortTimeString() },
+                new Task(){ Subject = "Английский", Finish = DateTime.Now.ToShortTimeString(), Start = DateTime.Now.ToShortTimeString() }} },
+                new Day { Name = "Tuesday", Tasks = new List<Task>{ new Task(){ Subject = "Испанский", Finish = DateTime.Now.ToShortTimeString(), Start = DateTime.Now.ToShortTimeString() } } },
+                new Day { Name = "Wednesday", Tasks = new List<Task>{ new Task(){ Subject = "Русский", Finish = DateTime.Now.ToShortTimeString(), Start = DateTime.Now.ToShortTimeString() } } },
+                new Day { Name = "Thursday", Tasks = new List<Task>{ new Task(){ Subject = "Китайский", Finish = DateTime.Now.ToShortTimeString(), Start = DateTime.Now.ToShortTimeString() } } },
+                new Day { Name = "Friday", Tasks = new List<Task>{ new Task(){ Subject = "Французский", Finish = DateTime.Now.ToShortTimeString(), Start = DateTime.Now.ToShortTimeString() } } },
+                new Day { Name = "Saturday", Tasks = new List<Task>{ new Task(){ Subject = "Польский", Finish = DateTime.Now.ToShortTimeString(), Start = DateTime.Now.ToShortTimeString() } } },
+                new Day { Name = "Sunday", Tasks = new List<Task>{ new Task(){ Subject = "Японский", Finish = DateTime.Now.ToShortTimeString(), Start = DateTime.Now.ToShortTimeString() } } }
             };
             return View();
         }

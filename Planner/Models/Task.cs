@@ -8,7 +8,7 @@ namespace Planner.Models
     public class Task
     {
         public string Subject { get; set; }
-        public DateTime Start { get; set; }
-        public DateTime Finish { get; set; }
+        public string Start { get; set; }
+        public string Finish { get; set; }
     }
 }

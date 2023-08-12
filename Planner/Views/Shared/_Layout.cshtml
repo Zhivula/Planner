@@ -11,21 +11,26 @@
     <div class="week">
         @foreach (var i in ViewBag.List)
         {
-        <ul class="week-ul">
-            <li class="name">@i.Name</li>
-            <li class="tasks">
-                <ul>
-                    @foreach (var task in i.Tasks)
-                    {
-                        <li class="task-li">
-                            <div class="task-div">
-                                @task.Subject
-                            </div>
-                        </li>
-                    }
-                </ul>
-            </li>
-        </ul>
+        <div class="week-ul">
+            <div class="name">@i.Name</div>
+            <div class="tasks">
+                @foreach (var task in i.Tasks)
+                {
+                    <div class="task-subject">
+                        @task.Subject
+                    </div>
+                    <div class="time">
+                        <div class="time-item">
+                            @task.Start
+                        </div>
+                        <div class="time-item">
+                            @task.Finish
+                        </div>
+                     </div>
+                }
+                <input type="button" class="button-add-new-task"/>
+            </div>
+        </div>
         }
     </div>
         <div class="body-main">@RenderBody()</div>
