@@ -1,0 +1,38 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+.week-ul, .name {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    font-family: 'Segoe UI Black';
+    color: white;
+    font-size: 25px;
+}
+.week{
+    display: flex;
+    justify-content:  space-around;
+    box-shadow: 0 5px 10px #000;
+    background-color: #212121;
+}
+.week, .week-ul, .tasks, .task-li {
+    border-radius: 5px;
+    background: #ffd800;
+    font-size: 10px;
+}
+.tasks ul {
+    box-shadow: 0 0px 0px #ffd800;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background: #121212;
+    color: #fff;
+    width: 100%;
+}
